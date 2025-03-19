@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: var(--fs-base);
   color: var(--clr-stone900);
+  background-color: var(--clr-stone100);
 }
 img,
 picture,
@@ -54,6 +55,12 @@ h6 {
   isolation: isolate;
 }
 
+main {
+  max-width: 768px;
+  background-color: white;
+  padding: 2rem;
+}
+
 section {
   margin-bottom: 2rem;
 }
@@ -90,6 +97,19 @@ li {
 
 .tertiary-heading {
   color: var(--clr-rose800);
+}
+
+@media (min-width: 768px) {
+  main {
+    border-radius: 1rem;
+    margin: 5rem auto;
+  }
+  .image-container {
+    border-radius: 1rem;
+  }
+  .recipe-image {
+    border-radius: inherit;
+  }
 }
 
 .preparation-section {
