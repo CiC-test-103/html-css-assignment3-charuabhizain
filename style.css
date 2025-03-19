@@ -58,7 +58,6 @@ h6 {
 main {
   max-width: 768px;
   background-color: white;
-  padding: 2rem;
 }
 
 section {
@@ -106,6 +105,7 @@ li {
   }
   .image-container {
     border-radius: 1rem;
+    padding: 2rem;
   }
   .recipe-image {
     border-radius: inherit;
