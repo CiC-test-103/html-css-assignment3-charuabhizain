@@ -1,29 +1,20 @@
 /** Variable Imports **/
 @import './variables.css';
-
-/**
-  CSS Reset
-  Source: https://www.joshwcomeau.com/css/custom-css-reset/
-**/
-/* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* 2. Remove default margin */
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  /* 3. Add accessible line-height */
   line-height: 1.5;
-  /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: var(--fs-base);
+  color: var(--clr-stone900);
 }
-/* 5. Improve media defaults */
 img,
 picture,
 video,
@@ -32,14 +23,12 @@ svg {
   display: block;
   max-width: 100%;
 }
-/* 6. Inherit fonts for form controls */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-/* 7. Avoid text overflows */
 p,
 h1,
 h2,
@@ -49,7 +38,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
@@ -61,55 +49,126 @@ h5,
 h6 {
   /* text-wrap: balance; */
 }
-/*
-  9. Create a root stacking context
-*/
 #root,
 #__next {
   isolation: isolate;
 }
 
-/** Your CSS Below **/
-
-/* 
-:root {
-  /* Layout */
-/* --width-mobile: 375px;
---width-desktop: 1440; */
-
-/* Colours */
-/* --clr-stone100: hsl(30, 54%, 90%);
---clr-stone150: hsl(30, 18%, 87%);
---clr-stone600: hsl(30, 10%, 34%);
---clr-stone900: hsl(24, 5%, 18%);
---clr-brown800: hsl(14, 45%, 36%);
---clr-rose50: hsl(330, 100%, 98%);
---clr-rose800: hsl(332, 51%, 32%); */
-
-/* Typography */
-/* --font-paragraph: 16px;
---font-header: 32px;
---font-sub-header: 24px;
---fw-regular: 400;
---fw-bold: 600;
---fw-black: 700; */
-
-/* Fonts
---fs-base: 'Outfit';
---fs-accent: 'Young-Serif'; */
 section {
-  /* border:3px solid red; */
-  /* margin: 0 1rem;
-  padding: 0 1rem; */
+  margin-bottom: 2rem;
+}
+
+ul,
+ol {
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.container {
+  margin: 2rem;
 }
 
 .header {
   font-size: var(--font-header);
   font-family: var(--fs-accent);
-  color:var(--clr-stone900);
+  color: var(--clr-stone900);
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
-/** Attribution CSS **/
+.sub-header {
+  font-size: var(--font-sub-header);
+  color: var(--clr-brown800);
+  font-family: var(--fs-accent);
+  font-weight: var(--fw-regular);
+  margin-bottom: 1rem;
+}
+
+.tertiary-heading {
+  color: var(--clr-rose800);
+}
+
+.preparation-section {
+  background-color: var(--clr-rose50);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+.preparation-list {
+  margin-top: 0.5rem;
+}
+
+.preparation-list li::marker {
+  color: var(--clr-rose800);
+  font-weight: var(--fw-black);
+}
+
+.preparation-list li > span {
+  color: var(--clr-stone900);
+  font-weight: var(--fw-black);
+}
+
+.ingredient-section {
+  border-bottom: 1px solid var(--clr-stone150);
+  padding-bottom: 2rem;
+}
+
+.ingredient-list li::marker {
+  color: var(--clr-brown800);
+  font-weight: var(--fw-black);
+}
+
+.instruction-section {
+  border-bottom: 1px solid var(--clr-stone150);
+  padding-bottom: 2rem;
+}
+
+.instruction-list li {
+  margin-bottom: 0.65rem;
+}
+
+.instruction-list li::marker {
+  color: var(--clr-brown800);
+  font-weight: bold;
+}
+
+.instruction-list li > span {
+  color: var(--clr-stone900);
+  font-weight: var(--fw-black);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-row:not(:last-child) {
+  border-bottom: 1px solid var(--clr-stone150);
+}
+
+.row-title {
+  width: 50%;
+}
+
+.row-value {
+  width: 50%;
+  color: var(--clr-brown800);
+  font-weight: var(--fw-bold);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
